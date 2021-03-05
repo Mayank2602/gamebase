@@ -1,0 +1,64 @@
+<html>
+<head>
+  <title>Firebase Login</title>
+  <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div id="login_div" class="main-div">
+    <h3>Login</h3>
+    <input type="email" placeholder="Email..." id="email_field" />
+    <input type="password" placeholder="Password..." id="password_field" />
+
+    <button onclick="login()">Login to Account</button>
+  </div>
+
+  <div id="user_div" class="loggedin-div">
+    <h3>Welcome User</h3>
+    <p id="user_para">Welcome to the website. You're currently logged in.</p>
+    <button onclick="logout()">Logout</button>
+  </div>
+
+ 
+  <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+       apiKey: "AIzaSyC7GuMAJjQizOc3-EC5C3EFLPpbpvgGvlQ",
+    authDomain: "woc-gamebase.firebaseapp.com",
+    projectId: "woc-gamebase",
+    storageBucket: "woc-gamebase.appspot.com",
+    messagingSenderId: "375590857603",
+    appId: "1:375590857603:web:d9aaa18df97c0bda02e4b6",
+    measurementId: "G-F3Y53LGGEW"
+    };
+    firebase.initializeApp(config);
+  </script>
+ 
+<script src="index.js"></script>
+
+</body>
+</html>
+<script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyC7GuMAJjQizOc3-EC5C3EFLPpbpvgGvlQ",
+    authDomain: "woc-gamebase.firebaseapp.com",
+    projectId: "woc-gamebase",
+    storageBucket: "woc-gamebase.appspot.com",
+    messagingSenderId: "375590857603",
+    appId: "1:375590857603:web:d9aaa18df97c0bda02e4b6",
+    measurementId: "G-F3Y53LGGEW"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
