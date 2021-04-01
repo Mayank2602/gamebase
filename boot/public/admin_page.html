@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>admin_Add_games</title>
+</head>
+<body>
+<h5> Add Games On this Page</h5>
+<input id="url1" type="url" placeholder="Add the game link here">
+<input id="name1" type="name" placeholder="Add the game name here">
+<button  id ="btn1" onclick="output1()"> ADD GAME </button>
+<div class="added">
+	These games were Recently added by the admin
+	
+</div>
+
+<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-firestore.js"></script>
+
+<script>
+    // Initialize Firebase
+    var config = {
+       apiKey: "AIzaSyC7GuMAJjQizOc3-EC5C3EFLPpbpvgGvlQ",
+    authDomain: "woc-gamebase.firebaseapp.com",
+    projectId: "woc-gamebase",
+    storageBucket: "woc-gamebase.appspot.com",
+    messagingSenderId: "375590857603",
+    appId: "1:375590857603:web:d9aaa18df97c0bda02e4b6",
+    measurementId: "G-F3Y53LGGEW"
+    };
+    firebase.initializeApp(config);
+
+     const db=firebase.firestore();
+     const au=firebase.auth();
+   
+  </script>
+ 
+  <script src="admin.js"></script>
+</body>
+</html>
