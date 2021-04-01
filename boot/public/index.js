@@ -1,6 +1,6 @@
 
  var user = firebase.auth().currentUser;
- document.cookie=user.uid;
+ 
 firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
 
