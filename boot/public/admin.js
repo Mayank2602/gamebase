@@ -9,16 +9,20 @@ db.collection("games")
         querySnapshot.forEach((doc) => {
             console.log(doc.data());
         	console.log(doc.data().name+ " "+doc.data().link);
-            list.innerHTML+="<h5>"+doc.data().name+"</h5>"+"<a href='"+doc.data().link+"'>link</a>";
+            
+            
+            
+            list.innerHTML+="<h5 >"+doc.data().name+"</h5>"+"<a href='"+doc.data().link+"'>link</a>";
            
             var temp=doc.data().name;
             var textnode1=document.createTextNode(temp);
             var textnode=document.createElement("a");
             textnode.appendChild(textnode1);
              console.log(textnode);
-            textnode.href="#";
+            textnode.href=doc.data().link;
             var listnode=document.createElement("li");
             listnode.classList.add("list-group-item")
+            textnode.classList.add("free")
             listnode.appendChild(textnode);
              
             var searchlist=document.getElementById("searchbar");
@@ -75,7 +79,7 @@ db.collection("games").doc().set({
 	var user= firebase.auth().currentUser;
     // User logged in already or has just logged in.
     console.log(user.uid);
-    if(user1.uid=="23"){
+    if(user.uid=="23"){
     	 document.querySelector("#btn1").style.display="block";
 
     		document.querySelector("#url1").style.display="block";

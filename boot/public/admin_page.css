@@ -2,9 +2,7 @@
 	float:right;
 	background-color: pink;
 }
-ul.searchbar{
-	color:black;
-}
+
 #titleblock{
 	border:solid white 10px;
 	text-align: center;
@@ -32,6 +30,20 @@ ul.searchbar{
 }
 #searchlist12{
 	font-family: Consolas, monaco, monospace;
+}
+#test2{
+	color:red;
+}
+.free{
+	text-align: center;
+
+}
+#searchbar ,.added{
+	list-style-type: circle;
+	text-align: center;
+}
+ul{
+	 list-style-type: circle;
 }
 /*font-family: Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
 font-family: Consolas, monaco, monospace;*/
