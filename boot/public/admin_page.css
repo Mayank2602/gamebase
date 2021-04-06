@@ -1,13 +1,18 @@
+body{
+	background-image:url("backmain.jpg"); 
+}
 .list-group-item{
 	float:right;
 	background-color: pink;
+
 }
 
 #titleblock{
 	border:solid white 10px;
 	text-align: center;
 		text-decoration:bold;
-		font-size:70px;
+		font-size:90px;
+		margin-bottom: 60px;
 		font-family: Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
 		
 }
@@ -34,16 +39,26 @@
 #test2{
 	color:red;
 }
-.free{
-	text-align: center;
 
-}
 #searchbar ,.added{
 	list-style-type: circle;
 	text-align: center;
+
 }
 ul{
 	 list-style-type: circle;
 }
+#abc{
+	color:black;
+	font-weight: bold;
+	text-decoration: square;
+	text-align:left;
+	margin-top:20px;
+	font-size: 20px;
+}
+#abc1{
+	color:black;
+	text-align: right;
+	margin-top:0px;}
 /*font-family: Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
 font-family: Consolas, monaco, monospace;*/

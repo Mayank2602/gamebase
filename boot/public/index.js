@@ -6,9 +6,9 @@ firebase.auth().onAuthStateChanged(function(user) {
 
     // User is signed in.
    
-    document.getElementById("user_div").style.display = "block";
+     document.getElementById("user_div").style.display = "block";
     document.getElementById("login_div").style.display = "none";
-    document.getElementById("register").style.display = "none";
+     document.getElementById("register").style.display = "none";
    
     
       console.log(user.uid);
@@ -48,7 +48,11 @@ function login(){
     // if a user forgets to sign out.
     // ...
     // New sign-in will be persisted with session persistence.
-    return firebase.auth().signInWithEmailAndPassword(userEmail, userPass)
+    
+     firebase.auth().signInWithEmailAndPassword(userEmail, userPass);
+
+
+
   })
   .catch((error) => {
     // Handle Errors here.
@@ -67,5 +71,5 @@ function logout(){
 }
  
 const home =()=>{
-  window.history.back();
+  window.location.replace("index.html")
 }

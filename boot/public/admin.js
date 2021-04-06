@@ -2,17 +2,58 @@
 const  list=document.querySelector(".added");
 var url_= document.getElementById("url1");
 var text_=document.getElementById("name1");
+ var searchlist=document.getElementById("searchbar");
+
+    au.onAuthStateChanged((user)=>{
+
+        if(user){
+
+    // User logged in already or has just logged in.
+    console.log(user.uid);
+    if(user.uid=='SHPQtJ8Ei1dwYcbDUojzumt7W562'){
+        console.log("checked loggedout122")
+         document.querySelector("#btn1").style.display="";
+
+            document.querySelector("#url1").style.display="";
+            document.querySelector("#name1").style.display="";
+            
+  }else {
+    // User not logged in or has just logged out.
+    
+    console.log("checked loggedout12")
+
+    document.querySelector("#btn1").style.display="none";
+
+            document.querySelector("#url1").style.display="none";
+            document.querySelector("#name1").style.display="none";}
+} else {
+    // User not logged in or has just logged out.
+    
+    console.log("checked loggedout12")
+
+    document.querySelector("#btn1").style.display="none";
+
+            document.querySelector("#url1").style.display="none";
+            document.querySelector("#name1").style.display="none";}
+
+           /* var anc=list.getElementsByTagName("a");
+            console.log(anc);
+            anc.href="#";
+*/
+            });
+      
+            
+        
+
 
 db.collection("games")
     .get()
     .then((querySnapshot) => {
         querySnapshot.forEach((doc) => {
-            console.log(doc.data());
-        	console.log(doc.data().name+ " "+doc.data().link);
             
             
             
-            list.innerHTML+="<h5 >"+doc.data().name+"</h5>"+"<a href='"+doc.data().link+"'>link</a>";
+            
            
             var temp=doc.data().name;
             var textnode1=document.createTextNode(temp);
@@ -25,17 +66,41 @@ db.collection("games")
             textnode.classList.add("free")
             listnode.appendChild(textnode);
              
-            var searchlist=document.getElementById("searchbar");
+           
             searchlist.classList.add("list-group")
          
             searchlist.appendChild(listnode);
             console.log(listnode);
+
+            au.onAuthStateChanged((user)=>{
+
+        if(user){
+             list.innerHTML+="<li id='abc'>"+doc.data().name+"</li>"+"<a id='abc1' href='"+doc.data().link+"'>Click Here To Access</a>";
+           
+    // User logged in already or has just logged in.
+console.log("logged in user")
+            
+  } else {
+    // User not logged in or has just logged out.
+    list.innerHTML+="<h5 id='abc'>"+doc.data().name+"</h5>"+"<a  href='"+"#"+"'>Click Here To Access</a>";
+     textnode.href="#";
+    
+            }});
+            
         });
     })
     .catch((error) => {
         console.log("Error getting documents: ", error);
     });
-
+    au.onAuthStateChanged((user)=>{if(user){console.log("flag1")}
+        else{
+    searchlist.addEventListener("click",()=>{
+        alert("sign in to access");
+     });
+     list.addEventListener("click",()=>{
+        alert("sign in to access");
+     });
+ }});
 function output1(){
 	
 
@@ -51,7 +116,7 @@ db.collection("games").doc().set({
   .onSnapshot((querySnapshot) => {
         querySnapshot.forEach((doc) => {
             console.log(doc.data().name+ " "+ doc.data().link);
-            document.getElementById("searchbar").innerHTML+="<h5>"+doc.data().name+"</h5>"+"<a href='"+doc.data().link+"'>link</a>";
+            document.getElementById("searchbar").innerHTML+="<li>"+doc.data().name+"</li>"+"<a href='"+doc.data().link+"'>Click Here To Access</a>";
             window.location.reload();
 
         });
@@ -67,32 +132,11 @@ db.collection("games").doc().set({
    
 }
 
-	au.onAuthStateChanged((user)=>{
-		if(user){
-			
       
-			console.log(user.uid)
-		}
-		else{
-			console.log("not working");
-		}
-	var user= firebase.auth().currentUser;
-    // User logged in already or has just logged in.
-    console.log(user.uid);
-    if(user.uid=="23"){
-    	 document.querySelector("#btn1").style.display="block";
 
-    		document.querySelector("#url1").style.display="block";
-    		document.querySelector("#name1").style.display="block";
-    		
-  } else {
-    // User not logged in or has just logged out.
-    console.log("check")
-    document.querySelector("#btn1").style.display="none";
 
-    		document.querySelector("#url1").style.display="none";
-    		document.querySelector("#name1").style.display="none";}
-    		});
+
+
    
 function searchfnx(){
     var input,li,filter,ul,txt,a,i;

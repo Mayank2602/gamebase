@@ -1,225 +1,85 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-   <link rel="stylesheet" type="text/css" href="test.css">
-
-
-    <!-- Bootstrap CSS -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>WOC-GAMEBASE</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-    <div class="sticky-top">
+    <link rel="stylesheet" type="text/css" href="admin_page.css">
+</head>
+<body>
+  <div class="sticky-top">
     <title>WOC</title>
   </head>
   <body>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light pb-3">
+  <nav class="navbar navbar-expand-lg navbar-light bg-dark pb-3">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">GAMEZONE</a>
+    <a class="navbar-brand" href="#" style="color:white">GAMEZONE</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+          <a class="nav-link active" aria-current="page" href="index.html" style="color:white">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="index1.html">sign up</a>
+          <a class="nav-link" href="index1.html" style="color:white">SIGN IN/SIGN UP</a>
 
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            MORE	
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" id="adminbase" href="admin_page.html" target="_blank">Access The Gamebase</a></li>
-            <li><a class="dropdown-item" href="#">coming soon</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">coming soon</a></li>
-          </ul>
+      
+       
         </li>
       
       </ul>
- 
+ <form class="d-flex">
+        <input class="form-control me-2" type="text" placeholder="Search" aria-label="Search" id="myinput" onkeyup="searchfnx()" >
+        <button class="btn btn-outline-success" type="input" >Clear</button>
+      </form>
     </div>
   </div>
 </nav>
 </div>
-<div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
-  </div>
-  <div class="carousel-inner">
-    <div class="carousel-item active" data-bs-interval="10000">
-      <img src="t1.jpg" class="d-block w-100" alt="...">
-      
-    </div>
-    <div class="carousel-item" data-bs-interval="2000">
-      <img src="t3.jpg" class="d-block w-100 h-0" alt="...">
-   
-    </div>
-    <div class="carousel-item">
-      <img src="t2.jpg" class="d-block w-100" alt="...">
-     
-    </div>
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark"  data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark"  data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
+<h5 id="titleblock"> WELCOME TO THE GAMEBASE</h5>
+<div id="addgame">
+<input id="url1" type="url" placeholder="Add the game link here">
+<input id="name1" type="name" placeholder="Add the game name here">
+<button  id ="btn1" onclick="output1()" class="btn btn-outline-danger"> ADD GAME </button>
 </div>
-
-<div class=" container-fluid mt-4">
-  <div id ="heading11" class="row">
-    <div class="col-sm-2 border">
-      <div style="border: black 3px solid">
-      Categories</div>
-    </div>
-
-    <div class="col-sm-6 border">
-      <div style="border: black 3px solid">HOT RIGHT NOW</div>
-    </div>
-    <div class="col-sm-3 border">
-      <div style="border: black 3px solid">LATEST ARRIVALS</div>
-    </div>
-  </div>
+	
 </div>
-
-	  	<div class="check">
-
-	  		<div class=" container-fluid mt-4" oncl>
+<div class="container">
   <div class="row">
-    <div class="col-sm-2 border">
-      <div class="list-group">
-  <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
-    Arcade
-  </a>
-  <a href="#" class="list-group-item list-group-item-action" img src="button.jpg">Quiz</a>
-  <a href="#" class="list-group-item list-group-item-action">Racing</a>
-  <a href="#" class="list-group-item list-group-item-action">Puzzle</a>
-
-</div>
-    </div>
-
-    <div class="col-sm-6 border">
-      <div class="list-group">
-  <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
-    Pirate Cards
-  </a>
-  <a href="#" class="list-group-item list-group-item-action">3d Free Kick</a>
-  <a href="#" class="list-group-item list-group-item-action">Diamond Rush</a>
-  <a href="#" class="list-group-item list-group-item-action">Bubble Tower 3d</a>
-  
-</div>
-    </div>
-    <div class="col-sm-3 border">
-      <div class="list-group">
-  <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
-    Multiplayer games
-  </a>
-  <a href="#" class="list-group-item list-group-item-action">Defly.io</a>
-  <a href="#" class="list-group-item list-group-item-action">Coming soon</a>
-  <a href="#" class="list-group-item list-group-item-action">Coming soon</a>
-
-</div>
-    </div>
+    <div class="col-6">
+   <div class="added" >                                  
+  <h5 class="text-start">These games were Recently added by the admin </h5></div></div>
+    <div class="col-6">
+      <h2 id="searchlist12">This is the active search list</h2>
+    <ol id="searchbar" > </ol></div>
   </div>
-	  	</div>
-
-
-</div></div>
-<div class="logme">
-<div class=" container-fluid mt-4" oncl>
-  <div class="row">
-    <div class="col-sm-2 border">
-      <div class="list-group">
-  <a href="https://html5games.com/Arcade/ecfe76c8-13f9-49c1-b81a-084011512dba" class="list-group-item list-group-item-action active" aria-current="true">
-    Arcade
-  </a>
-  <a href="https://html5games.com/Quiz/8e0b96cd-0fed-4354-a43d-ae4785a798fd" class="list-group-item list-group-item-action">Quiz</a>
-  <a href="https://html5games.com/Racing/b53dc097-05cd-457f-a811-e0c6c47ca37a" class="list-group-item list-group-item-action">Racing</a>
-  <a href="https://html5games.com/Puzzle/af2ebd26-0786-423b-90da-ffb229840819" class="list-group-item list-group-item-action">Puzzle</a>
-
 </div>
-    </div>
-
-    <div class="col-sm-6 border">
-      <div class="list-group">
-  <a href="https://html5games.com/Game/Pirate-Cards/7ba3cf66-f926-40dc-ba0e-6b1d7204d1b4" class="list-group-item list-group-item-action active" aria-current="true">
-    Pirate Cards
-  </a>
-  <a href="https://html5games.com/Game/3D-Free-Kick/2ee096ab-4cd7-4f9a-baa9-f58a54413c47" class="list-group-item list-group-item-action">3d Free Kick</a>
-  <a href="https://html5games.com/Game/Diamond-Rush/395b0746-6d0e-4ec8-b11c-18cab8009214" class="list-group-item list-group-item-action">Diamond Rush</a>
-  <a href="https://html5games.com/Game/Bubble-Tower-3D/1385d98a-b5f2-4339-bce7-b99a8dd2e8b0" class="list-group-item list-group-item-action">Bubble Tower 3d</a>
-  
-</div>
-    </div>
-    <div class="col-sm-3 border">
-      <div class="list-group">
-  <a href="https://html5games.com/Multiplayer/4b2f5813-483b-4fa1-adf6-e6b542bc1b57" class="list-group-item list-group-item-action active" aria-current="true">
-    Multiplayer games
-  </a>
-  <a href="https://html5games.com/Game/Deflyio/da7010c7-6f03-460c-891d-8737c569603f" class="list-group-item list-group-item-action">Defly.io</a>
-  <a href="#" class="list-group-item list-group-item-action">Coming soon</a>
-  <a href="#" class="list-group-item list-group-item-action">Coming soon</a>
-
-</div>
-    </div>
-  </div>
-	</div>
-  	
-
-<<div class="mx-auto" style="width: 200px;">
-Gamebase-WOC</div>
-
-    <!-- Optional JavaScript; choose one of the two! -->
-
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
-
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js" integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous"></script>-->
-   <!-- The core Firebase JS SDK is always required and must be listed first -->
- <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/4.8.1/firebase-auth.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase-firestore.js"></script>
-
-<!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#available-libraries -->
 
 
+
+<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-firestore.js"></script>
 
 <script>
-  // Your web app's Firebase configuration
-  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-  var firebaseConfig = {
-    apiKey: "AIzaSyC7GuMAJjQizOc3-EC5C3EFLPpbpvgGvlQ",
+    // Initialize Firebase
+    var config = {
+       apiKey: "AIzaSyC7GuMAJjQizOc3-EC5C3EFLPpbpvgGvlQ",
     authDomain: "woc-gamebase.firebaseapp.com",
     projectId: "woc-gamebase",
     storageBucket: "woc-gamebase.appspot.com",
     messagingSenderId: "375590857603",
     appId: "1:375590857603:web:d9aaa18df97c0bda02e4b6",
     measurementId: "G-F3Y53LGGEW"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
+    };
+    firebase.initializeApp(config);
 
-    const db=firebase.firestore();
-
-</script>
- <script src="setup.js"></script>
-
+     const db=firebase.firestore();
+     const au=firebase.auth();
+   
+  </script>
  
- 
-  </body>
+  <script src="admin.js"></script>
+</body>
 </html>
