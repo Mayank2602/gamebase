@@ -1,4 +1,9 @@
 
+document.getElementById("toggle_nav").addEventListener("click",()=>{
+    if (document.getElementById("navbarSupportedContent").style.display=="block"){
+        document.getElementById("navbarSupportedContent").style.display="none"}
+  else{ document.getElementById("navbarSupportedContent").style.display="block"} 
+    })
 const  list=document.querySelector(".added");
 var url_= document.getElementById("url1");
 var text_=document.getElementById("name1");
